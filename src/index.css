@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
+  background-color:rgb(225, 222, 222);
 }
 ::-webkit-scrollbar {
   display: none;
@@ -31,44 +32,48 @@ code {
 }
 .main_content{
   display: flex;
-  flex-direction: column;
   position: relative;
   width: 100vw;
-  justify-content: space-between;
 }
 .input_1{
   margin-top: 30px;
-  height: 200px;
-  background-color:rgb(245, 245, 245);
+  height: 450px;
+  background-color:white;
   margin-bottom: 20px;
-  width : 50%;
-  margin-left: 23%;
+  width : 35%;
+  margin-left: 10%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   padding: 20px;
   border-radius: 7px;
+  resize: none;
 }
 .input_2{
-  margin-top: 20px;
-  height: 200px;
-  background-color: whitesmoke;
+  margin-top: 30px;
+  height: 450px;
+  background-color: white;
   margin-bottom: 20px;
-  width : 50%;
-  margin-left: 23%;
+  width : 35%;
+  margin-left: 3%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   padding: 20px;
   border-radius: 7px;
+  resize: none;
 }
 .rephrase_btn{
-  width: 28%;
-  padding: 13px;
-  margin-left: 36%;
-  font: 2em sans-serif;
+  min-width: 10vw;
+  padding: 10px;
+  margin-left: 37.5%;
+  font: 1.2em sans-serif;
   border-radius: 7px;
   cursor: pointer;
-  background-color: purple;
+  background-color: rgb(145, 21, 145);
   color: white;
+}
+.rephrase_btn:hover{
+  background-color: rgb(162, 32, 162);
+  /* font-size:1.3rem; */
 }
 .rephrase_btn span {
   cursor: pointer;
@@ -93,4 +98,19 @@ code {
 .rephrase_btn:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: grey;
+  opacity: 1; /* Firefox */
+  font-style: italic;
+  font-size:large;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: grey;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: grey;
 }
