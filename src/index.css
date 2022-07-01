@@ -29,6 +29,7 @@ code {
   align-items: center;
   justify-content:center;
   position:sticky;
+  border-radius: 9px;
 }
 .main_content{
   display: flex;
@@ -37,10 +38,10 @@ code {
 }
 .input_1{
   margin-top: 30px;
-  height: 450px;
+  height: 70vh;
   background-color:white;
   margin-bottom: 20px;
-  width : 35%;
+  width : 35vw;
   margin-left: 10%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -50,10 +51,10 @@ code {
 }
 .input_2{
   margin-top: 30px;
-  height: 450px;
+  height: 70vh;
   background-color: white;
   margin-bottom: 20px;
-  width : 35%;
+  width : 35vw;
   margin-left: 3%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -64,25 +65,41 @@ code {
 .rephrase_btn{
   min-width: 10vw;
   padding: 10px;
-  margin-left: 37.5%;
-  font: 1.2em sans-serif;
+  margin-left: 37.2vw;
+  font: 2.0vmin sans-serif;
   border-radius: 7px;
   cursor: pointer;
   background-color: rgb(145, 21, 145);
   color: white;
+  position: relative;
 }
-.rephrase_btn:hover{
+.change_phrase_btn{
+  min-width: 7vw;
+  padding: 8px;
+  margin-left: 33.2vw;
+  font: 2.0vmin sans-serif;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(145, 21, 145);
+  color: white;
+  position: relative;
+}
+.btns_div{
+  display: flex;
+  height: 50px;
+}
+.rephrase_btn:hover , .change_phrase_btn:hover{
   background-color: rgb(162, 32, 162);
   /* font-size:1.3rem; */
 }
-.rephrase_btn span {
+.rephrase_btn span , .change_phrase_btn span{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.rephrase_btn span:after {
+.rephrase_btn span:after , .change_phrase_btn span:after{
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -91,11 +108,11 @@ code {
   transition: 0.5s;
 }
 
-.rephrase_btn:hover span {
+.rephrase_btn:hover span , .change_phrase_btn:hover span{
   padding-right: 25px;
 }
 
-.rephrase_btn:hover span:after {
+.rephrase_btn:hover span:after , .change_phrase_btn:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -114,3 +131,40 @@ code {
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: grey;
 }
+
+
+
+
+.progress{
+  position: relative;
+  height: 10px;
+  width: 7vw;
+  border: 10px solid #A020F0;
+  border-radius: 15px;
+  margin-left: 39.2vw;
+}
+.progress .color{
+  position: absolute;
+  background-color: #38b72c;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 4s infinite linear;    
+}
+@keyframes progres{
+  0%{
+    width: 0%;
+  }
+  25%{
+      width: 50%;
+  }
+  50%{
+      width: 75%;
+  }
+  75%{
+      width: 85%;
+  }
+  100%{
+      width: 100%;
+  }
+};
