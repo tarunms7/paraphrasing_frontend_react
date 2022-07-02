@@ -26,6 +26,7 @@ export default function Main_Content(){
                     temp += resp.data[key][Math.floor(Math.random()*resp.data[key].length)]
                 });
                 setOutput(temp)
+                document.getElementsByClassName("input2").removeAttribute("readOnly")
                 setIsLoading(false)
             } catch (err) {
                 // Handle Error Here
@@ -41,10 +42,10 @@ export default function Main_Content(){
         setOutput(temp)
     }
     return(
-        <div>
+        <div className="inputs_and_btns">
             <div className ="main_content">
-            <textarea className="input_1" placeholder={placeholder} onChange = {(e) => setInput(e.target.value)}></textarea>
-            <textarea placeholder = "Nothing to display" value={output} onChange = {(e)=>{setOutput(e.target.value)}} className="input_2"></textarea>
+                <textarea className="input_1" placeholder={placeholder} onChange = {(e) => setInput(e.target.value)} name = "input_1" value={input}></textarea>
+                <textarea placeholder = "Nothing to display" value={output} onChange = {(e)=>{setOutput(e.target.value)}} name = "output_1" className="output_1" readOnly></textarea>
             </div>
             <div className = "btns_div">
                 {isLoading?

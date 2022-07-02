@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
-  background-color:rgb(225, 222, 222);
+  background-color:rgb(199, 196, 196);
 }
 ::-webkit-scrollbar {
   display: none;
@@ -18,9 +18,9 @@ code {
 
 .navbar_main{
   width: 100vw;
-  height : 70px;
+  height : 60px;
   color:white;
-  background-color: purple;
+  background-color: rgb(161, 46, 161);
   top:0;
   left:0;
   /* position: relative; */
@@ -28,8 +28,13 @@ code {
   display: flex;
   align-items: center;
   justify-content:center;
-  position:sticky;
-  border-radius: 9px;
+  position: sticky;
+  position:-webkit-sticky;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+.inputs_and_btns{
+  position: fixed
 }
 .main_content{
   display: flex;
@@ -44,12 +49,12 @@ code {
   width : 35vw;
   margin-left: 10%;
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 20px;
   border-radius: 7px;
   resize: none;
 }
-.input_2{
+.output_1{
   margin-top: 30px;
   height: 70vh;
   background-color: white;
@@ -57,7 +62,7 @@ code {
   width : 35vw;
   margin-left: 3%;
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 20px;
   border-radius: 7px;
   resize: none;
@@ -72,17 +77,19 @@ code {
   background-color: rgb(145, 21, 145);
   color: white;
   position: relative;
+  font-weight: bold;
 }
 .change_phrase_btn{
-  min-width: 7vw;
+  min-width: 9vw;
   padding: 8px;
-  margin-left: 33.2vw;
+  margin-left: 32.2vw;
   font: 2.0vmin sans-serif;
   border-radius: 7px;
   cursor: pointer;
   background-color: rgb(145, 21, 145);
   color: white;
   position: relative;
+  font-weight: bold;
 }
 .btns_div{
   display: flex;
@@ -118,7 +125,7 @@ code {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: grey;
+  color: rgb(176, 173, 173);
   opacity: 1; /* Firefox */
   font-style: italic;
   font-size:large;
@@ -168,3 +175,4 @@ code {
       width: 100%;
   }
 };
+
