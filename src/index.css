@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
-  background-color:rgb(199, 196, 196);
+  background-color:rgb(240, 233, 240);
+  zoom: 100%;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -20,7 +21,7 @@ code {
   width: 100vw;
   height : 60px;
   color:white;
-  background-color: rgb(161, 46, 161);
+  background-color: rgb(94, 5, 94);
   top:0;
   left:0;
   /* position: relative; */
@@ -34,20 +35,24 @@ code {
   border-bottom-right-radius: 9px;
 }
 .inputs_and_btns{
-  position: fixed
+  display: flex;
 }
 .main_content{
   display: flex;
+  flex-direction: column;
   position: relative;
-  width: 100vw;
+  width: 75vw;
+}
+.input_output{
+  display: flex;
 }
 .input_1{
   margin-top: 30px;
   height: 70vh;
   background-color:white;
   margin-bottom: 20px;
-  width : 35vw;
-  margin-left: 10%;
+  width : 30vw;
+  margin-left: 5%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   padding: 20px;
@@ -59,7 +64,7 @@ code {
   height: 70vh;
   background-color: white;
   margin-bottom: 20px;
-  width : 35vw;
+  width : 30vw;
   margin-left: 3%;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
@@ -67,10 +72,39 @@ code {
   border-radius: 7px;
   resize: none;
 }
+.accessButtons{
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  padding: 4vmin;
+  max-width: 28vw;
+  max-height: 80vh;
+  overflow: auto;
+}
+.access_buttons_child{
+    margin-bottom: 2vmin;
+    min-width: 4vw;
+    padding:1vmin;
+    background-color: rgb(221, 187, 221);
+    color: rgb(16, 1, 16);
+    border-radius: 2vmin;
+    border: none;
+    font: 1em sans-serif;
+    cursor: pointer;
+    
+}
+.access_buttons_child:hover{
+  background-color:rgb(209, 164, 209) ;
+}
+.btns_div{
+  display: flex;
+  height: 50px;
+  max-width: 70%;
+}
 .rephrase_btn{
   min-width: 10vw;
-  padding: 10px;
-  margin-left: 37.2vw;
+  padding: 1vmin;
+  margin-left: 25vw;
   font: 2.0vmin sans-serif;
   border-radius: 7px;
   cursor: pointer;
@@ -82,7 +116,7 @@ code {
 .change_phrase_btn{
   min-width: 9vw;
   padding: 8px;
-  margin-left: 32.2vw;
+  margin-left: 25vw;
   font: 2.0vmin sans-serif;
   border-radius: 7px;
   cursor: pointer;
@@ -91,10 +125,7 @@ code {
   position: relative;
   font-weight: bold;
 }
-.btns_div{
-  display: flex;
-  height: 50px;
-}
+
 .rephrase_btn:hover , .change_phrase_btn:hover{
   background-color: rgb(162, 32, 162);
   /* font-size:1.3rem; */
@@ -106,17 +137,24 @@ code {
   transition: 0.5s;
 }
 
-.rephrase_btn span:after , .change_phrase_btn span:after{
+.rephrase_btn span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: -2vmin;
   transition: 0.5s;
 }
-
+.change_phrase_btn span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -2vmin;
+  transition: 0.5s;
+}
 .rephrase_btn:hover span , .change_phrase_btn:hover span{
-  padding-right: 25px;
+  padding-right: 1vmin;
 }
 
 .rephrase_btn:hover span:after , .change_phrase_btn:hover span:after {
@@ -144,11 +182,11 @@ code {
 
 .progress{
   position: relative;
-  height: 10px;
-  width: 7vw;
+  height: 1.3vh;
+  min-width: 10vw;
   border: 10px solid #A020F0;
   border-radius: 15px;
-  margin-left: 39.2vw;
+  margin-left: 25vw;
 }
 .progress .color{
   position: absolute;
